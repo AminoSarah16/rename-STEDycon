@@ -10,7 +10,7 @@ from tkinter import filedialog
 import shutil
 
 ##this is the only thing to be changed:
-replace = 'IMG0002_IF47_correl-LI47_d3_spl5b_'
+replace = 'IMG0014_SVS_'
 remv_char = len(replace)
 
 def main():
