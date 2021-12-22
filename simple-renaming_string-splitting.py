@@ -9,9 +9,6 @@ import os
 from tkinter import filedialog
 import shutil
 
-##this is the only thing to be changed:
-REPLACE = '[PhaseContrast]'
-WITH = 'PhC'
 
 def main():
     root_path = filedialog.askdirectory()  #prompts user to choose directory. From tkinter
@@ -30,7 +27,10 @@ def main():
 def copy_and_rename_them(filenames, root_path, result_path):
     for filename in filenames:
         input_file = os.path.join(root_path, filename)
-        new_filename = filename.replace(REPLACE, WITH)
+        split_filename = filename.replace('[', ']').split("]")
+        new_filename = split_filename[0].replace("Stitched", '') + split_filename[1] + split_filename[2]
+        print(split_filename)
+        print(new_filename)
         output_file = os.path.join(result_path, new_filename)
         print(input_file)
         print(output_file)

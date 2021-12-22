@@ -10,7 +10,7 @@ from tkinter import filedialog
 import shutil
 
 # prompts user to say what to replace (the number at the beginning is removed automatically, just if yuo also want to remove stuff at the end):
-REPLACE = str(input('Please enter the part (loop-pos or similar) you want to have replaced exactly as it appears in the filename (best copy-paste!: '))
+REPLACE = str(input('Please enter the part (loop-pos or similar) you want to have replaced exactly as it appears in the filename (best copy-paste!): '))
 WITH = ''
 
 def main():
