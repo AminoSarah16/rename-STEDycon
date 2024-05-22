@@ -6,7 +6,7 @@ Göttingen, May 2021, Sarah Vanessa Schweighofer
 
 
 import os
-#from tkinter import filedialog
+from tkinter import filedialog
 import shutil
 
 ##these are the things to be changed:
@@ -21,7 +21,7 @@ file_format = ".fastq"
 
 
 def main():
-    root_path = "C:/Users/sschwei/Documents/HPC/Illumina_FH1_new-indices/data"  #prompts user to choose directory. From tkinter
+    root_path = filedialog.askdirectory()  #prompts user to choose directory. From tkinter
     result_path = os.path.join(root_path, 'renamed')
     if not os.path.isdir(result_path):
         os.makedirs(result_path)
